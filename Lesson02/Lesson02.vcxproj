@@ -154,7 +154,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Apple.cpp" />
+    <ClCompile Include="Banana.cpp" />
+    <ClCompile Include="Fruit.cpp" />
+    <ClCompile Include="GrannySmith.cpp" />
     <ClCompile Include="Lesson02.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Student.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Apple.h" />
+    <ClInclude Include="Banana.h" />
+    <ClInclude Include="Fruit.h" />
+    <ClInclude Include="GrannySmith.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
