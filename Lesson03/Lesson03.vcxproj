@@ -94,6 +94,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,7 +155,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bus.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="Lesson03.cpp" />
+    <ClCompile Include="Minivan.cpp" />
+    <ClCompile Include="Parallelogram.cpp" />
+    <ClCompile Include="PassengerCar.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Rhombus.cpp" />
+    <ClCompile Include="Square.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bus.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Figure.h" />
+    <ClInclude Include="Fraction.h" />
+    <ClInclude Include="Minivan.h" />
+    <ClInclude Include="Parallelogram.h" />
+    <ClInclude Include="PassengerCar.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Rhombus.h" />
+    <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
