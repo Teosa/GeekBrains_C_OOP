@@ -4,6 +4,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson01", "Lesson01\Lesson
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson02", "Lesson02\Lesson02.vcxproj", "{8499EC5F-8090-4238-9232-B9FBD684E4D7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson03", "Lesson03\Lesson03.vcxproj", "{55083335-B0A1-4682-B9CE-E33AFF7D6385}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlackJack", "BlackJack\BlackJack.vcxproj", "{E33B8621-9601-4852-A95A-5200BD005DA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -28,5 +32,21 @@ Global
 		{8499EC5F-8090-4238-9232-B9FBD684E4D7}.Release|Win32.Build.0 = Release|Win32
 		{8499EC5F-8090-4238-9232-B9FBD684E4D7}.Release|x64.ActiveCfg = Release|x64
 		{8499EC5F-8090-4238-9232-B9FBD684E4D7}.Release|x64.Build.0 = Release|x64
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Debug|Win32.Build.0 = Debug|Win32
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Debug|x64.ActiveCfg = Debug|x64
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Debug|x64.Build.0 = Debug|x64
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Release|Win32.ActiveCfg = Release|Win32
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Release|Win32.Build.0 = Release|Win32
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Release|x64.ActiveCfg = Release|x64
+		{55083335-B0A1-4682-B9CE-E33AFF7D6385}.Release|x64.Build.0 = Release|x64
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Debug|Win32.Build.0 = Debug|Win32
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Debug|x64.ActiveCfg = Debug|x64
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Debug|x64.Build.0 = Debug|x64
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Release|Win32.ActiveCfg = Release|Win32
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Release|Win32.Build.0 = Release|Win32
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Release|x64.ActiveCfg = Release|x64
+		{E33B8621-9601-4852-A95A-5200BD005DA1}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
