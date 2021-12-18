@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <memory>
 #include <vector>
 
 #include "Card.h"
@@ -6,10 +7,13 @@
 
 class Hand : public Player
 {
-    std::vector<Card*> deck;
+    vector<shared_ptr<Card>> deck;
 
-    void Hand::addSuitPack(CardSuit suit);
+    void addSuitPack(CardSuit suit);
+    int getRandomCardIndexFromDeck() const;
 public:
     Hand();
     ~Hand();
+
+    void giveCard(shared_ptr<Player>& player);
 };

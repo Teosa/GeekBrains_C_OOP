@@ -1,11 +1,15 @@
 ﻿#pragma once
+#include <map>
+#include <ostream>
+
+using namespace std;
 
 enum CardSuit
 {
-    SPADE,   // Пики
-    HEART,   // Черви
+    SPADE, // Пики
+    HEART, // Черви
     DIAMOND, // Буби
-    CLUB     // Крести
+    CLUB // Крести
 };
 
 enum CardValue
@@ -27,13 +31,27 @@ enum CardValue
 
 class Card
 {
+    static string SPADE_UNICODE;
+    static string CLUB_UNICODE;
+    static string HEART_UNICODE;
+    static string DIAMOND_UNICODE;
+    static map<CardValue, string> cardValueAsString;
+    
     CardSuit suit;
     CardValue value;
-    bool isVisible;
+    bool released;
+    bool hidden;
+
+    wstring getSuitUnicode();
+    static map<CardValue, string> fillMap();
 public:
     Card(CardSuit suit, CardValue value);
-    ~Card() = default;
+    ~Card();
+
+    friend ostream& operator<<(ostream& stream, Card& card);
 
     CardValue getValue() const;
-    
+    string getValueAsString() const;
+    void setReleased(bool value);
+    bool isReleased() const;
 };
