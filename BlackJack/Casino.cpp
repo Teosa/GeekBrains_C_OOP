@@ -2,20 +2,12 @@
 
 #include <iostream>
 
-Casino::Casino() : pHand(new Hand()), gameEnded(false) { }
-Casino::~Casino()
-{
-    delete pHand;
-
-    for (auto pPlayer : players)
-    {
-        delete pPlayer;
-    }
-}
+Casino::Casino() : pHand(make_shared<Hand>()), gameEnded(false) { }
+Casino::~Casino() { if(_DEBUG) cout << "Casino destructor" << endl; }
 
 void Casino::addPlayer(const string name)
 {
-    players.push_back(new Player(name));
+    players.push_back(make_shared<Player>(name));
 }
 
 void Casino::startTheGame()
@@ -29,11 +21,28 @@ void Casino::startTheGame()
 
 void Casino::run()
 {
-    // plays...
-    std::cout << players[0]->getName() << std::endl;
+    for (const auto player : players)
+    {
+        playWithPlayer(player);
+    }
+
+    // playWithPlayer(pHand);
     
     endGame();
 }
+
+void Casino::playWithPlayer(shared_ptr<Player> player)
+{
+    bool enough = false;
+
+    while(!enough)
+    {
+        pHand->giveCard(player);
+        printTable();
+        enough = offerCard();
+    }
+}
+
 
 void Casino::endGame()
 {
@@ -52,6 +61,27 @@ void Casino::endGame()
         std::cout << "Thank you for playing!" << std::endl;
     }
 }
+
+void Casino::printTable() const
+{
+    if (system("CLS")) system("clear");
+    
+    for (const auto player : players)
+    {
+        cout << *player << endl;
+    }
+}
+
+bool  Casino::offerCard() const
+{
+    char answer;
+    cout << "Would you like one more card? y/n" << endl;
+    cin >> answer;
+
+    return answer == 'y' || answer == 'Y';
+}
+
+
 
 
 

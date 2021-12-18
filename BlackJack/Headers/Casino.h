@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <memory>
 #include <vector>
 
 #include "Hand.h"
@@ -6,16 +7,22 @@
 
 class Casino
 {
-    std::vector<Player*> players;
-    Hand* pHand;
+    vector<shared_ptr<Player>> players;
+    shared_ptr<Hand> pHand;
     bool gameEnded;
 
     void run();
     void endGame();
+    void printTable() const;
+    bool offerCard() const;
+    void playWithPlayer(shared_ptr<Player>);
 public:
     Casino();
     ~Casino();
     
     void startTheGame();
     void addPlayer(string name);
+
+
+
 };

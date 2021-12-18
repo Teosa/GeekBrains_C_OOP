@@ -1,13 +1,12 @@
 ﻿#include "Headers/Player.h"
 
+#include <iostream>
+
 Player::Player(const string name) : name(name)
 {
 };
 
-Player::~Player()
-{
-    dropCards();
-}
+Player::~Player() { }
 
 
 string Player::getName() const
@@ -17,10 +16,8 @@ string Player::getName() const
 
 void Player::dropCards()
 {
-    for (auto pCard : cards)
-    {
-        delete pCard;
-    }
+    cout << "Player::dropCards" << endl;
+   cards.clear();
 }
 
 int Player::getTotalScore()
@@ -45,3 +42,21 @@ int Player::getTotalScore()
 
     return totalScore;
 }
+
+void Player::addCard(const shared_ptr<Card>& card)
+{
+    cards.push_back(card);
+}
+
+ostream& operator<<(ostream& stream, Player& player)
+{
+    stream << player.getName() << "'s cards: ";
+    
+    for (auto card : player.cards)
+    {
+        stream << *card << "   ";
+    }
+
+    return stream << endl;
+}
+
